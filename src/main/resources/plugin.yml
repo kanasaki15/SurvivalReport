@@ -1,0 +1,10 @@
+name: SurvivalReport
+version: @version@
+main: xyz.n7mn.dev.survivalreport.SurvivalReport
+api-version: 1.16
+authors: [ 7mi_chan ]
+description: SurvivalReport
+commands:
+  report:
+    description: ''
+    usage: '/report'
