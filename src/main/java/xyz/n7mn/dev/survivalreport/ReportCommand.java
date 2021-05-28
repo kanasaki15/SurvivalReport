@@ -45,7 +45,7 @@ public class ReportCommand implements CommandExecutor {
         builder.setDescription("内容：\n```\n"+sb.toString().replaceAll("`","｀")+"\n```\n\n運営へ\n対応が済んだらリアクションをお願いします。");
         builder.setFooter(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 
-        jda.getTextChannelById(plugin.getConfig().getString("sendChannelID")).sendMessage("テスト").embed(builder.build()).queue();
+        jda.getTextChannelById(plugin.getConfig().getString("sendChannelID")).sendMessage("").embed(builder.build()).queue();
         sender.sendMessage(ChatColor.YELLOW + "[ななみ生活鯖] "+ChatColor.GREEN+"通報ありがとうございました。");
 
         return true;
