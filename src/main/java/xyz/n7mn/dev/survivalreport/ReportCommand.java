@@ -29,7 +29,7 @@ public class ReportCommand implements CommandExecutor {
         if (args.length == 0){
             sender.sendMessage(ChatColor.YELLOW + "[ななみ生活鯖] "+ChatColor.RESET+"こちらは通報コマンドです。\n" +
                     "使い方は「/report 内容」です。\n" +
-                    "例：「/report ここが荒れています！」、「/report ○○○○さんが荒らしです！」" +
+                    "例：「/report ここが荒れています！」、「/report ○○○○さんが空飛んでいます！」" +
                     "※いたずらや嘘の通報はBAN対象です。");
             return true;
         }
@@ -66,7 +66,7 @@ public class ReportCommand implements CommandExecutor {
         );
         builder.setFooter(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 
-        jda.getTextChannelById(plugin.getConfig().getString("sendChannelID")).sendMessage("").embed(builder.build()).queue();
+        jda.getTextChannelById(plugin.getConfig().getString("sendChannelID")).sendMessage(builder.build()).queue();
         sender.sendMessage(ChatColor.YELLOW + "[ななみ生活鯖] "+ChatColor.GREEN+"通報ありがとうございました。");
 
         return true;
